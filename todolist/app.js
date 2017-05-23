@@ -71,6 +71,7 @@ app.post('/todo/add', (req, res, next) => {
 app.delete('/todo/delete/:id', (req, res, next) => {
     const query = {_id : ObjectID(req.params.id)}
     Todos.deleteOne(query, (err, response) => {
+        console.log('here');
         if(err){
             return console.log(err);
         }

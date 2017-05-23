@@ -1,5 +1,6 @@
 $(document).ready(() => {
     $('.delete-todo').on('click', (e) => {
+        console.log('in jquery');
         $target = $(e.target);
         const id = $target.attr('data-id');
         $.ajax({
