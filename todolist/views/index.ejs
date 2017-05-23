@@ -13,7 +13,9 @@
     <ul>
         <% todos.forEach(function(todo){ %>
             <li>
-                <%= todo.text %> - <%= todo.body %><a data-id="<%= todo._id %>" href="#" class="delete-todo">Delete</a>
+                <%= todo.text %> - <%= todo.body %>
+                <a data-id="<%= todo._id %>" href="#" class="delete-todo">Delete</a>
+                <a href="/todo/edit/<%= todo._id %>">Edit</a>
             </li>
         <% }) %>
     </ul>
