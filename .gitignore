@@ -49,5 +49,8 @@ Temporary Items
 #node modules
 node_modules/
 
+#bower
+bower_components/
+
 #target file
 dist/
