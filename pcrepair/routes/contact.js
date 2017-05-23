@@ -17,7 +17,7 @@ router.post('/send', function(req, res, next){
         service : 'Gmail',
         auth : {
             user : 'xuguo2002@gmail.com',
-            pass : 'guoxu666'
+            pass : 'pass'//not real
         }
     });
 
