@@ -1,9 +1,19 @@
 <% include ../views/partials/header %>
-    Hello from index~
+    <form method="post" action="/todo/add">
+        <div>
+            <label>Todo Name</label>
+            <input type="text" name="text" placeholder="Add Todo">
+        </div>
+        <div>
+            <label>Todo Body</label>
+            <textarea name="body" placeholder="Add Body"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
     <ul>
         <% todos.forEach(function(todo){ %>
             <li>
-                <%= todo.text %> - <%= todo.body %>
+                <%= todo.text %> - <%= todo.body %><a data-id="<%= todo._id %>" href="#" class="delete-todo">Delete</a>
             </li>
         <% }) %>
     </ul>
