@@ -1,4 +1,14 @@
 extends layout
 
 block content
-    h1 #{title}
+    .container
+        h1 #{title}
+        table(class='table table-striped')
+            tr
+                th Category Title
+                th
+            each category, i in categories
+                tr
+                    td #{category.title}
+                    td
+                        a(class='btn btn-tiny btn-primary' href='/manage/categories/edit/'+category._id) Edit
