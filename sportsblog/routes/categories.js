@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-Category = require('../models/category.js');
+const Category = require('../models/category.js');
 
-//categories - GET
+// list categories - GET
 router.get('/', (req, res, next) => {
     Category.getCategories((err, categories) => {
         if(err){

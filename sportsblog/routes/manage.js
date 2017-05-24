@@ -1,16 +1,20 @@
 const express = require('express');
 const router = express.Router();
 
-Category = require('../models/category.js');
+const Category = require('../models/category.js');
+const Article = require('../models/article.js');
 
-//list all articles
+//list all articles -GET
 router.get('/articles', (req, res, next) => {
-    res.render('manage_articles', {
-        title : 'Manage Articles'
+    Article.getArticles((err, articles) => {
+        res.render('manage_articles', {
+            title : 'Manage Articles',
+            articles : articles
+        });
     });
 });
 
-//list all categories
+//list all categories - GET
 router.get('/categories', (req, res, next) => {
     Category.getCategories((err, categories) => {
         if(err){
@@ -25,28 +29,28 @@ router.get('/categories', (req, res, next) => {
     });
 });
 
-//add new article
+//add new article. render add_article.js - GET
 router.get('/articles/add', (req, res, next) => {
-    res.render('add_article', {
-        title : 'Create Article'
+    //list existing categories for new article
+    Category.getCategories((err, categories) => {
+        if(err){
+            res.send(err);
+        }
+        res.render('add_article', {
+            title : 'Create Article',
+            categories : categories
+        });
     });
 });
 
-//add new category
+//add new category, render add_category - GET
 router.get('/categories/add', (req, res, next) => {
     res.render('add_category', {
         title : 'Add Category'
     });
 });
 
-//edit article
-router.get('/articles/edit/:id', (req, res, next) => {
-    res.render('edit_articles', {
-        title : 'Edit Articles'
-    });
-});
-
-//edit category
+//edit category, render edit_category -GET
 router.get('/categories/edit/:id', (req, res, next) => {
     Category.getCategoryById(req.params.id, (err, category) => {
         if(err){
@@ -58,6 +62,22 @@ router.get('/categories/edit/:id', (req, res, next) => {
         });
     });
 
+});
+
+//edit article, render edit_article -GET
+router.get('/articles/edit/:id', (req, res, next) => {
+    Article.getArticleById(req.params.id, (err, article) => {
+        if(err){
+            res.send(err);
+        }
+        Category.getCategories((err, categories) => {
+            res.render('edit_article', {
+                title : 'Edit Article',
+                article : article,
+                categories : categories
+            });
+        });
+    });
 });
 
 module.exports = router;
