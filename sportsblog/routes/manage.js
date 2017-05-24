@@ -48,9 +48,16 @@ router.get('/articles/edit/:id', (req, res, next) => {
 
 //edit category
 router.get('/categories/edit/:id', (req, res, next) => {
-    res.render('edit_category', {
-        title : 'Edit Category'
+    Category.getCategoryById(req.params.id, (err, category) => {
+        if(err){
+            res.send(err);
+        }
+        res.render('edit_category', {
+            title : 'Edit Category',
+            category : category
+        });
     });
+
 });
 
 module.exports = router;

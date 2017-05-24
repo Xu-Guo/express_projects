@@ -1,4 +1,15 @@
 extends layout
 
 block content
-    h1 #{title}
+    .container
+        h1 #{title}
+        form(method='post', action='/categories/edit/'+category._id)
+            .form-group
+                label Title:
+                input.form-control(name='title', type='text', value=category.title)
+            .form-group
+                label Description:
+                textarea.form-control(name='description') #{category.description}
+            input.btn.btn-primary(type='submit', name='submit', value='Save')
+            a.btn.btn-default(href='/manage/categories') Back
+            a.btn.btn-danger.category-delete.pull-right(href='/manage/categories', data-cat-id=category._id) Delete
