@@ -34,6 +34,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Express session
+app.use(session({
+    secret : 'secret',
+    resave : false,
+    saveUninitialized : true
+}));
+
 //express messages
 app.use(require('connect-flash')());
 app.use(function (req, res, next){

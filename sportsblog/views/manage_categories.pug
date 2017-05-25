@@ -8,7 +8,9 @@ block content
             .col-md-3
                 a(class='btn btn-primary create-btn', href='/manage/categories/add') Add Category
     br
+
     .container
+        != message()
         table(class='table table-striped')
             tr
                 th Category Title

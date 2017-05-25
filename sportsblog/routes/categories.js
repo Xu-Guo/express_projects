@@ -38,7 +38,7 @@ router.post('/add', (req, res, next) => {
             if(err){
                 res.send(err);
             }
-            console.log('Add Category..')
+            req.flash('success', 'Category Saved.');
             res.redirect('/manage/categories');
         });
     }
@@ -75,7 +75,7 @@ router.post('/edit/:id', (req, res, next) => {
             if(err){
                 res.send(err);
             }
-            console.log('Edit Category..')
+            req.flash('success', 'Category Updated.');
             res.redirect('/manage/categories');
         });
     }
@@ -91,7 +91,6 @@ router.delete('/delete/:id', (req, res, next) => {
         if(err){
             res.send(err);
         }
-        console.log('Deleted Category..')
         res.status(200);
     });
 });
