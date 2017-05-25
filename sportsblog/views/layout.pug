@@ -5,10 +5,12 @@ html
         link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.css")
         link(rel="stylesheet", href="/css/style.css")
     body
+        include ./includes/navbar.pug
         block content
         hr
         footer
             .container
                 Copyright &copy; 2017, SportsBlog
     script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
     script(src='/js/main.js')
