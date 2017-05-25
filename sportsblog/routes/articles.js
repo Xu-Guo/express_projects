@@ -24,10 +24,15 @@ router.get('/show/:id', (req, res, next) => {
     });
 });
 
-//list all existing categories for new article to select in the drop down
+//show articles grouped be category
 router.get('/category/:category_id', (req, res, next) => {
-    res.render('articles', {
-        title : 'Category Articles'
+    Article.getArticlesByCategory(req.params.category_id, (error, articles) => {
+        Category.getCategoryById(req.params.category_id, (error, category) => {
+            res.render('articles', {
+                title : category.title+' Articles',
+                articles : articles
+            });
+        });
     });
 });
 

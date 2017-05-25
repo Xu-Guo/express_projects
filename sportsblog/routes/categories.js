@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
             res.send(err);
         }
 
-        console.log(categories);
+        //console.log(categories);
         res.render('categories',{
             title : 'Categories',
             categories : categories
