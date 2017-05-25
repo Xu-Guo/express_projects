@@ -1,0 +1,26 @@
+{
+  "name": "passportapp",
+  "version": "1.0.0",
+  "description": "Simple passport.js application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node app"
+  },
+  "author": "Xu Guo",
+  "license": "ISC",
+  "dependencies" : {
+      "express" : "*",
+      "body-parser" : "*",
+      "express-handlebars" : "*",
+      "express-session" : "*",
+      "express-messages" : "*",
+      "express-validator" : "*",
+      "connect-flash" : "*",
+      "mongoose" : "*",
+      "passport" : "*",
+      "passport-http" : "*",
+      "passport-local" : "*",
+      "bcryptjs" : "*"
+  }
+}
