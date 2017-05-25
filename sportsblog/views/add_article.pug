@@ -3,12 +3,16 @@ extends layout
 block content
     .container
         h1 #{title}
+        ul.errors
+            if errors
+                each error, i in errors
+                    li.alert.alert-danger #{error.msg}
         form(method='post', action='/articles/add')
             .form-group
                 label Title:
                 input.form-control(name='title', type='text')
             .form-group
-                label subtitle:
+                label Subtitle:
                 input.form-control(name='subtitle', type='text')
             .form-group
                 label Category:

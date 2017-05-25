@@ -46,7 +46,7 @@ router.get('/articles/add', (req, res, next) => {
 //add new category, render add_category - GET
 router.get('/categories/add', (req, res, next) => {
     res.render('add_category', {
-        title : 'Add Category'
+        title : 'Create Category'
     });
 });
 
