@@ -1,4 +1,11 @@
 extends layout
 
 block content
-    h1 #{title}
+    .container
+        h1 #{article.title}
+        h4.post-subtitle #{article.subtitle}
+        p.post-meta
+            | Posted by #{article.author}
+            | on #{moment(article.created_at).format('MMMM Do YYYY, h:mm:ss a')}
+        p.post-body
+            | #{article.body}

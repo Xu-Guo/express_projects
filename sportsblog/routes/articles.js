@@ -19,8 +19,11 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/show/:id', (req, res, next) => {
-    res.render('article', {
-        title : 'Article'
+    Article.getArticleById(req.params.id, (error, article) => {
+        res.render('article', {
+            title : 'Article',
+            article : article
+        });
     });
 });
 
