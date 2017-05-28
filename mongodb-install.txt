@@ -1,0 +1,5 @@
+#Set db path and log path
+cmd : mongod --directoryperdb --dbpath d:\mongodb\data\db --logpath d:\mongodb\log\mongo.log --rest --install
+
+#start service
+cmd : net start mongodb
