@@ -2,8 +2,10 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 
+//init app
 const app = express();
 
+//port
 const port = 3000;
 
 const mongojs = require('mongojs');
@@ -12,6 +14,18 @@ const db = mongojs('clientkeeper', ['client']);
 //set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
+
+//Allow request from other domain
+app.use((req, res, next) => {
+    //website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+    //Request method you wish to Allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    //Request headers you wish to Allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, contect-type');
+    //pass to next layer of middleware
+    next();
+});
 
 app.get('/', (req, res, next) => {
     res.send('Please use /api/clients');
