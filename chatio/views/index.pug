@@ -1,0 +1,38 @@
+doctype html
+head
+    title Real-Time Chat
+    link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet", href="/css/style.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+    script(src="/js/main.js")
+    script(src="socket.io/socket.io.js")
+body
+    nav.navbar.navbar-inverse
+        .container
+            .navbar-header
+            a.navbar-brand(href='/') eChat
+    .container
+        .row
+            .col-md-8
+                #error
+                #userFormWrap
+                    h1 Create Username
+                    form#userForm
+                        input#username.form-control(type='text', placeholder='Enter Username...')
+                        br
+                        button.btn.btn-primary(type='submit') Submit
+                #mainWrap
+                    h1 Speak your Mind
+                    form#chatForm
+                        .form-group
+                            textarea#chatInput.form-control(name='body', placeholder='Say Something...')
+                            br
+                            button.btn.btn-primary(type='submit') Submit
+                            br
+                            br
+                        #chatWindow.well
+            .col-md-4
+                h3 Chat Users
+                ul.list-group
+                    #users
