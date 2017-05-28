@@ -6,8 +6,8 @@ const loaclStrategy = require('passport-local').Strategy;
 
 let User = require('../models/user');
 
-//Home page
-router.get('/', (req, res, next) => {
+//Home page -Dash board
+router.get('/', ensureAuthenticated, (req, res, next) => {
     res.render('index', {
         title: "Index"
     });
@@ -25,6 +25,13 @@ router.get('/login', (req, res, next) => {
     res.render('login', {
         title: "Login"
     });
+});
+
+//Logout
+router.get('/logout', (req, res, next) => {
+    req.logout();
+    req.flash('success_msg', 'You are logged out...');
+    res.redirect('login');
 });
 
 //Process register
@@ -112,4 +119,15 @@ router.post('/login', (req, res, next) => {
         failureFlash: true
     })(req, res, next)
 });
+
+//Access control
+function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    } else {
+        req.flash('error_msg', 'You are not authorized to view this page, please log in...');
+        res.redirect('/login');
+    }
+}
+
 module.exports = router;
