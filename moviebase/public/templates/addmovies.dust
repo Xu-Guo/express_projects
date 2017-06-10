@@ -1,0 +1,57 @@
+{>"layouts/master" /}
+
+{<body}
+    <div class="row">
+        <a href="/movies">Go Back</a>
+        <h2>Add Movie</h2>
+        <form method="post" action="/movies/add">
+            <div>
+                <label> Title *
+                    <input type="text" name="title" placeholder="Add Title"
+                </label>
+            </div>
+            <div>
+                <label> Release Date
+                    <input type="date" name="release_date" placeholder=""
+                </label>
+            </div>
+            <div>
+                <label> Genre *
+                    <select name="genre">
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Documentary">Documentary</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label> Plot
+                    <textarea name="plot" placeholder="Plot"></textarea>
+                </label>
+            </div>
+            <div>
+                <label> Director
+                    <input type="text" name="director" placeholder="Director"></input>
+                </label>
+            </div>
+            <div>
+                <label> Cover URL
+                    <input type="text" name="cover" placeholder="Image URL">
+                </label>
+            </div>
+            <div>
+                <label> Youtube Trailer Code
+                    <input type="text" name="trailer">
+                </label>
+            </div>
+            <div>
+                <input type="submit" class="button" value="Submit">
+            </div>
+            <input type="hidden" name="_csrf" value="{_csrf}">
+        </form>
+    </div>
+{/body}

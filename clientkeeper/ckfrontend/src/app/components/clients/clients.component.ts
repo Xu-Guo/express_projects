@@ -12,6 +12,7 @@ export class ClientsComponent implements OnInit{
 	last_name;
 	email;
 	phone;
+	isEdit;
 	constructor(private clientService : ClientService){
 
 	}
@@ -20,6 +21,7 @@ export class ClientsComponent implements OnInit{
 		this.clientService.getClients().subscribe(clients => {
 			this.clients = clients;
 		});
+		this.isEdit = false;
 	}
 
 	onAddSubmit(){
@@ -35,6 +37,48 @@ export class ClientsComponent implements OnInit{
 			this.last_name = '';
 			this.email = '';
 			this.phone = '';
+		});
+	}
+
+	onEditSubmit(){
+			let updateClient = {
+			first_name : this.first_name,
+			last_name : this.last_name,
+			email : this.email,
+			phone : this.phone,
+			_id : this._id
+		}
+
+		this.clientService.updateClient(updateClient).subscribe(client => {
+			for (let i = 0; i < this.clients.length; i++){
+				if (client._id = this.clients[i]._id){
+					this.clients.splice(i, 1);
+				}
+			}
+			this.clients.push(client);
+			this.first_name = '';
+			this.last_name = '';
+			this.email = '';
+			this.phone = '';
+		});
+	}
+
+	onEditClick(client){
+		this.isEdit = true;
+		this.first_name = client.first_name;
+		this.last_name = client.last_name;
+		this.email = client.email;
+		this.phone = client.phone;
+		this._id = client._id;
+	}
+
+	onDeleteClick(id){
+		this.clientService.deleteClient(id).subscribe(client => {
+			for (let i = 0; i < this.clients.length; i++){
+				if (id = this.clients[i]._id){
+					this.clients.splice(i, 1);
+				}
+			}
 		});
 	}
 }

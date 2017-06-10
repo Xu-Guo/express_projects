@@ -1,0 +1,13 @@
+{>"layouts/master" /}
+
+{<body}
+    {#movies}
+        <div class="large-4 columns end">
+            <img src="{.cover}">
+            <h3>{.title}</h3>
+            <a class="button" href="/movies/details/{.id}">Info</a>
+        </div>
+    {:else}
+        <p>No Movies Results</p>
+    {/movies}
+{/body}

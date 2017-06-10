@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{+title /}</title>
+        <link rel="stylesheet" href="/components/foundation/css/foundation.css">
+        <link rel="stylesheet" href="/css/app.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="row">
+                <div class="columns large-8">
+                    <h1><a href="movies">MovieBase</a></h1>
+                </div>
+                <div class="columns large-4">
+                    <a href="/movies/add" class="button right">Add Movies</a>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="row">
+            <div class="columns large-8">
+                {#errors}
+                <div class="alert-box alert">{.msg}</div>
+                {/errors}
+                {+body /}
+            </div>
+            <div class="columns large-4">
+                Search!!!
+            </div>
+        </div>
+
+
+        <script data-main="/js/app" src="/components/requirejs/require.js"></script>
+        <script src="/components/jquery/dist/jquery.js"></script>
+        <script src="/components/foundation/js/foundation.js"></script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "moviebase",
+  "version": "0.1.0",
+  "description": "simple movie listing app",
+  "author": "Xu Guo",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test",
+    "build": "grunt build",
+    "all": "npm run build && npm run test"
+  },
+  "dependencies": {
+    "construx": "*",
+    "construx-copier": "*",
+    "construx-dustjs": "*",
+    "construx-less": "*",
+    "dust-makara-helpers": "*",
+    "eslint": "*",
+    "express": "*",
+    "express-validator": "^3.2.0",
+    "kraken-js": "*",
+    "makara": "*",
+    "mongoose": "^4.10.5",
+    "requirejs": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-config-dir": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-copy-to": "*",
+    "grunt-dustjs": "*",
+    "grunt-eslint": "*",
+    "grunt-makara-amdify": "*",
+    "grunt-mocha-cli": "*",
+    "mocha": "*",
+    "supertest": "*"
+  }
+}
