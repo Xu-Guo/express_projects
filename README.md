@@ -7,9 +7,9 @@ Mutliple applications build with Express.js on the back-end, different projects 
 
 A simple online chat application built with socket.io and Express.js on the back-end and Jade(pug) as view engine.People can join the chat in real-time.
 
-## Demo Images
+### Demo Images
 ![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/chatio.png)
-## Installation
+### Installation
 
 * [Express.js](http://expressjs.com): backend framework	
 * [Pug](https://pugjs.org/api/getting-started.html): view engine
@@ -20,7 +20,7 @@ A simple online chat application built with socket.io and Express.js on the back
 1. Install dependencies: ```npm install```
 2. Install bootstrap: ```bower install bootstrap```
 
-## Usage and How to Run
+### Usage and How to Run
 
 Desc :Real-time online chatting app, can be plugin to any existing [Express.js](http://expressjs.com) project.<br>
 
