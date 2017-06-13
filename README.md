@@ -3,7 +3,7 @@
 
 Mutliple applications build with Express.js on the back-end, different projects may use different templating engine or Front-end framework.Have fun those these projects.
 
-## 1.Real-time Chat 
+## 1.Real-Time Chat 
 
 A simple online chat application built with socket.io and Express.js on the back-end and Jade(pug) as view engine.People can join the chat in real-time.
 
