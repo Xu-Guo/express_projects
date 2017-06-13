@@ -21,8 +21,7 @@ A simple online chat application built with socket.io and Express.js on the back
 
 ### Demo Images
 ![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/chatio.png)
-
-###
+<hr>
 ### Installation
 
 * [Express.js](http://expressjs.com): backend framework	
