@@ -1,7 +1,7 @@
 
 # Express Project
 
-Mutliple applications build with Express.js on the back-end, different projects may use different templating engine or Front-end framework.Have fun those these projects :D.
+Mutliple applications build with Express.js on the back-end, different projects may use different templating engine or Front-end framework.Have fun those these projects.
 
 ## 1.Real-time Chat 
 
@@ -26,7 +26,7 @@ Desc :Real-time online chatting app, can be plugin to any existing [Express.js](
 To run this application: 
 1. Route to project folder and use ```npm start``` to start the server.
 2. Open browser and go to ```http://localhost:3000```
-3. Enjoy the chat app :d.
+3. Enjoy the chat app.
 
 
 ## Contributing
@@ -35,7 +35,7 @@ To run this application:
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+5. Submit a pull request.
 
 
 
