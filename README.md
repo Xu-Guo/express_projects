@@ -17,7 +17,7 @@ All the projects are built following the tutorial from [Brad Traversy](https://g
 
 ## 1.Real-Time Chat 
 
-A simple online chat application built with socket.io and Express.js on the back-end and Jade(pug) as view engine.People can join the chat in real-time.
+A simple online chat application built with socket.io and Express.js on the back-end and Jade(pug) as view engine. People can join the chat and post in real-time.
 
 ### Demo Images
 ![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/chatio.png)
