@@ -41,4 +41,4 @@ To run this application:
 
 ## Credits
 
-All the project are built follow the tutorial from [Brad Traversy](https://github.com/bradtraversy?tab=repositories), Thanks for providing such good material.
+All the projects are built following the tutorial from [Brad Traversy](https://github.com/bradtraversy?tab=repositories), thanks for providing such good material.
