@@ -51,6 +51,7 @@ node_modules/
 
 #bower
 bower_components/
+components
 
 #target file
 dist/
