@@ -1,4 +1,3 @@
-
 # Express Project
 
 Mutliple applications build with Express.js on the back-end, different projects may use different templating engine or Front-end framework.Have fun those these projects.
@@ -21,6 +20,8 @@ A simple online chat application built with socket.io and Express.js on the back
 
 ### Demo Images
 ![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/chatio.png)
+<hr>
+
 ### Installation
 
 * [Express.js](http://expressjs.com): backend framework	
@@ -41,4 +42,34 @@ To run this application:
 2. Open browser and go to ```http://localhost:3000```
 3. Enjoy the chat app.
 
+## 2.Passport.js App 
+
+A simple login and authentication application. The project use back-end server local authentication method and can be integrated into any [Express.js] web applications.Database is MongoDB.
+
+### Demo Images
+![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/passportapp.png)
+![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/passportapp1.png)
+<hr>
+
+### Installation
+
+* [Express.js](http://expressjs.com): backend framework	
+* [handlebars](http://handlebarsjs.com/): view engine
+* [Passport.js](http://passportjs.org/): real-time engine
+* [Bootstrap](http://www.getbootstrap.com):  layout and styles
+* [Mongoose](http://mongoosejs.com/): MongoDB ODM
+* [MongoDB](https://www.mongodb.com/): Database
+
+
+1. Install dependencies: ```npm install```
+2. Install bootstrap: ```bower install bootstrap```
+
+### Usage and How to Run
+
+Desc :Simple login, register, authentication application.<br>
+
+To run this application: 
+1. Route to project folder and use ```npm start``` to start the server.
+2. Open browser and go to ```http://localhost:3000```
+3. Enjoy the chat app.
 
