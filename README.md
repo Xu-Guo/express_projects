@@ -134,7 +134,7 @@ To run this application:
 A simple ToDoList application.
 
 ### Demo Images
-![alt text]()
+![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/todo.png)
 <hr>
 
 ### Installation
