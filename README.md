@@ -95,7 +95,9 @@ A simple PC reqair website application
 ### Usage and How to Run
 
 Please modify the code in routes/contact.js to config the nodemailer so that the server can send email to notify.
-```var transporter = nodemailer.createTransport({
+
+```
+var transporter = nodemailer.createTransport({
         service : 'Gmail',
         auth : {
             user : 'jd@gmail.com',
@@ -119,6 +121,7 @@ Please modify the code in routes/contact.js to config the nodemailer so that the
         console.log('Message Sent: '+info.response);
         res.redirect('/');
     }); 
+    
 ```
 
 To run this application: 
