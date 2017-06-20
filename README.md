@@ -73,3 +73,56 @@ To run this application:
 2. Open browser and go to ```http://localhost:3000```
 3. Enjoy the chat app.
 
+
+## 3.PC repair website App 
+
+A simple PC reqair website application 
+
+### Demo Images
+![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/passportapp.png)
+![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/passportapp1.png)
+<hr>
+
+### Installation
+
+* [Express.js](http://expressjs.com): backend framework	
+* [pug](https://pugjs.org/api/getting-started.html): view engine
+
+
+1. Install dependencies: ```npm install```
+2. Install bootstrap: ```bower install bootstrap```
+
+### Usage and How to Run
+
+Please modify the code in routes/contact.js to config the nodemailer so that the server can send email to notify.
+```var transporter = nodemailer.createTransport({
+        service : 'Gmail',
+        auth : {
+            user : 'jd@gmail.com',
+            pass : 'password'//not real
+        }
+    });
+
+    var mailOptions = {
+        from : '"JohnDoe" <jd@gmail.com>',
+        to : 'pcrepair@gmail.com',
+        subject : 'Hello from PC Repair',
+        text : 'You have a submission from... Name : ' + req.body.name + ' Email : ' + req.body.email + 'Message' + req.body.message,
+        html : '<p>You have a submission from...</p><ul><li> Name : ' + req.body.name + '</li><li> Email : ' + req.body.email + '</li><li> Message : ' + req.body.message + '</li></ul>'
+    }
+
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+            return console.log(error);
+        }
+
+        console.log('Message Sent: '+info.response);
+        res.redirect('/');
+    }); 
+```
+
+To run this application: 
+1. Route to project folder and use ```npm start``` to start the server.
+2. Open browser and go to ```http://localhost:3000```
+3. Enjoy the chat app.
+
