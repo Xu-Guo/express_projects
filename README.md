@@ -79,8 +79,7 @@ To run this application:
 A simple PC reqair website application 
 
 ### Demo Images
-![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/passportapp.png)
-![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/passportapp1.png)
+![alt text](https://github.com/Xu-Guo/express_projects/blob/master/demoimages/pcrepair.png)
 <hr>
 
 ### Installation
